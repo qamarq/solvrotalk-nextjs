@@ -3,9 +3,10 @@ import { RandomDogClient } from '@/components/random-dog-client';
 import React, { Suspense } from 'react';
 
 export default function RandomDogClientPage() {
-  const dogPromise = fetch('https://dog.ceo/api/breeds/image/random').then(
-    (res) => res.json()
-  );
+  const dogPromise = Promise.all([
+    fetch('https://dog.ceo/api/breeds/image/random').then((res) => res.json()),
+    new Promise((resolve) => setTimeout(resolve, 1000))
+  ]);
 
   return (
     <div className="h-screen w-full flex items-center justify-center flex-col">

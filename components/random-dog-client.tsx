@@ -6,7 +6,7 @@ import React, { use } from 'react';
 export function RandomDogClient({
   dogPromise
 }: {
-  dogPromise: Promise<{ message: string }>;
+  dogPromise: Promise<[{ message: string }, unknown]>;
 }) {
   const dog = use(dogPromise);
 
@@ -17,7 +17,7 @@ export function RandomDogClient({
       }
     >
       <Image
-        src={dog.message}
+        src={dog[0].message}
         width={500}
         height={500}
         alt="Random Dog"

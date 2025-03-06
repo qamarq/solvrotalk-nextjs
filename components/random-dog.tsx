@@ -4,13 +4,10 @@ export async function RandomDog() {
   const dog = await fetch('https://dog.ceo/api/breeds/image/random').then(
     (res) => res.json()
   );
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return (
-    <div
-      onClick={() =>
-        alert('This is a random dog image fetched from the Dog CEO API')
-      }
-    >
+    <div>
       <Image
         src={dog.message}
         width={500}

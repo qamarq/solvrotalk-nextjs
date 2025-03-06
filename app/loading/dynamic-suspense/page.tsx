@@ -1,9 +1,10 @@
+import { Container } from '@/components/container';
 import UserListComponent from '@/components/user-list';
 import React, { Suspense } from 'react';
 
 export default function DynamicPageWithLoading() {
   return (
-    <div className="flex gap-3">
+    <Container className="flex-row gap-4 items-start h-auto">
       <div className="flex flex-col gap-2">
         <h1>Dynamic Page</h1>
         <p>Static page content</p>
@@ -14,6 +15,6 @@ export default function DynamicPageWithLoading() {
           <UserListComponent />
         </Suspense>
       </div>
-    </div>
+    </Container>
   );
 }
