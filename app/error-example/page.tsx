@@ -2,6 +2,8 @@ import { exampleErrorFunction } from '@/actions/error-action'
 import { Container } from '@/components/container'
 import React from 'react'
 
+export const dynamic = 'force-dynamic'
+
 export default async function ExampleErrorPage() {
   await exampleErrorFunction()
 
