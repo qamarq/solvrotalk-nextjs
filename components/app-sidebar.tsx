@@ -114,7 +114,7 @@ export function AppSidebar() {
                 </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <Link href="/error-ex">
+                <Link href="/error-example">
                   <SidebarMenuButton>
                     <Search />
                     <span>Error example</span>
