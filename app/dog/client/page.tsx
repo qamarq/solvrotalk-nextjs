@@ -84,7 +84,7 @@ export default function RandomDogClientPage() {
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize={50}>
         <Container>
-          <Tabs defaultValue="page.tsx" className="p-20 w-full h-[1000px]">
+          <Tabs defaultValue="page.tsx" className="p-2 md:p-10 3xl:p-20 w-full">
             <TabsList>
               <TabsTrigger value="page.tsx">page.tsx</TabsTrigger>
               <TabsTrigger value="random-dog-client.tsx">
