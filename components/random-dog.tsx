@@ -1,10 +1,10 @@
-import Image from 'next/image';
+import Image from 'next/image'
 
 export async function RandomDog() {
   const dog = await fetch('https://dog.ceo/api/breeds/image/random').then(
     (res) => res.json()
-  );
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  )
+  await new Promise((resolve) => setTimeout(resolve, 1000))
 
   return (
     <div>
@@ -16,5 +16,5 @@ export async function RandomDog() {
         className="size-[500px] aspect-square object-center object-cover"
       />
     </div>
-  );
+  )
 }

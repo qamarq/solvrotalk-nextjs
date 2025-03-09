@@ -1,6 +1,6 @@
-import { Container } from '@/components/container';
-import UserListComponent from '@/components/user-list';
-import React from 'react';
+import { Container } from '@/components/container'
+import UserListComponent from '@/components/user-list'
+import React from 'react'
 
 export default function DynamicPageWithSuspense() {
   return (
@@ -14,5 +14,5 @@ export default function DynamicPageWithSuspense() {
         <UserListComponent />
       </div>
     </Container>
-  );
+  )
 }

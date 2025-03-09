@@ -1,9 +1,9 @@
-import { exampleErrorFunction } from '@/actions/error-action';
-import { Container } from '@/components/container';
-import React from 'react';
+import { exampleErrorFunction } from '@/actions/error-action'
+import { Container } from '@/components/container'
+import React from 'react'
 
 export default async function ExampleErrorPage() {
-  await exampleErrorFunction();
+  await exampleErrorFunction()
 
   return (
     <Container>
@@ -11,5 +11,5 @@ export default async function ExampleErrorPage() {
         This is my fantastic page
       </h1>
     </Container>
-  );
+  )
 }

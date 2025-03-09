@@ -1,6 +1,6 @@
-import { LoadingImageFallback } from '@/components/fallbacks';
-import { RandomDog } from '@/components/random-dog';
-import React, { Suspense } from 'react';
+import { LoadingImageFallback } from '@/components/fallbacks'
+import { RandomDog } from '@/components/random-dog'
+import React, { Suspense } from 'react'
 
 export default function RandomDogServerPage() {
   return (
@@ -10,5 +10,5 @@ export default function RandomDogServerPage() {
         <RandomDog />
       </Suspense>
     </div>
-  );
+  )
 }

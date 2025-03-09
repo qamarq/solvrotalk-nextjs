@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import {
   Calendar,
@@ -8,9 +8,8 @@ import {
   Inbox,
   LucideIcon,
   Search,
-  Settings,
-  User2
-} from 'lucide-react';
+  User2,
+} from 'lucide-react'
 
 import {
   Sidebar,
@@ -25,21 +24,21 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarMenuSubButton,
-  SidebarMenuSubItem
-} from '@/components/ui/sidebar';
+  SidebarMenuSubItem,
+} from '@/components/ui/sidebar'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger
-} from './ui/dropdown-menu';
-import Link from 'next/link';
+  DropdownMenuTrigger,
+} from './ui/dropdown-menu'
+import Link from 'next/link'
 import {
   Collapsible,
   CollapsibleContent,
-  CollapsibleTrigger
-} from './ui/collapsible';
-import { usePathname } from 'next/navigation';
+  CollapsibleTrigger,
+} from './ui/collapsible'
+import { usePathname } from 'next/navigation'
 
 const collapsibleItems = [
   {
@@ -50,13 +49,13 @@ const collapsibleItems = [
     items: [
       {
         title: 'Server',
-        url: '/dog/server'
+        url: '/dog/server',
       },
       {
         title: 'Client',
-        url: '/dog/client'
-      }
-    ]
+        url: '/dog/client',
+      },
+    ],
   },
   {
     title: 'Loading example',
@@ -66,27 +65,27 @@ const collapsibleItems = [
     items: [
       {
         title: 'Dynamic',
-        url: '/loading/dynamic'
+        url: '/loading/dynamic',
       },
       {
         title: 'Dynamic with suspense',
-        url: '/loading/dynamic-suspense'
-      }
-    ]
-  }
+        url: '/loading/dynamic-suspense',
+      },
+    ],
+  },
 ] as {
-  title: string;
-  url: string;
-  icon?: LucideIcon;
-  isActive?: boolean;
+  title: string
+  url: string
+  icon?: LucideIcon
+  isActive?: boolean
   items?: {
-    title: string;
-    url: string;
-  }[];
-}[];
+    title: string
+    url: string
+  }[]
+}[]
 
 export function AppSidebar() {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
     <Sidebar suppressHydrationWarning>
@@ -115,7 +114,7 @@ export function AppSidebar() {
                 </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <Link href="/error-ex">
+                <Link href="/error-example">
                   <SidebarMenuButton>
                     <Search />
                     <span>Error example</span>
@@ -190,5 +189,5 @@ export function AppSidebar() {
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
-  );
+  )
 }
