@@ -40,7 +40,7 @@ export default function RootLayout({
           <SidebarProvider>
             <AppSidebar />
             <main className="w-full">
-              <SidebarTrigger />
+              <SidebarTrigger className="fixed" />
               {children}
             </main>
           </SidebarProvider>
