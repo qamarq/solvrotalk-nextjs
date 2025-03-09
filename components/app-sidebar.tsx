@@ -8,7 +8,6 @@ import {
   Inbox,
   LucideIcon,
   Search,
-  Settings,
   User2,
 } from 'lucide-react'
 
