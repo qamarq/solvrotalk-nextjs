@@ -91,11 +91,15 @@ export function AppSidebar() {
   return (
     <Sidebar suppressHydrationWarning>
       <SidebarHeader>
-        <Link href="/">
-          <h1 className="text-blue-100 text-xl font-bold">
-            SolvroTalk - Next.Js
-          </h1>
-        </Link>
+        <SidebarMenu>
+          <SidebarMenuButton asChild>
+            <Link href="/">
+              <span className="text-blue-100 text-xl font-bold">
+                SolvroTalk - Next.Js
+              </span>
+            </Link>
+          </SidebarMenuButton>
+        </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
