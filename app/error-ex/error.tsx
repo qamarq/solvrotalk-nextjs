@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import { Container } from '@/components/container';
-import { Button } from '@/components/ui/button';
+import { Container } from '@/components/container'
+import { Button } from '@/components/ui/button'
 
 // Error boundaries must be Client Components
 
 export default function Error({
   error,
-  reset
+  reset,
 }: {
-  error: Error & { digest?: string };
-  reset: () => void;
+  error: Error & { digest?: string }
+  reset: () => void
 }) {
   return (
     <Container className="text-center">
@@ -18,5 +18,5 @@ export default function Error({
       <p className="text-sm text-muted-foreground mb-2">{error.message}</p>
       <Button onClick={() => reset()}>Try again</Button>
     </Container>
-  );
+  )
 }

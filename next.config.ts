@@ -1,4 +1,4 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   images: {
@@ -8,10 +8,10 @@ const nextConfig: NextConfig = {
         hostname: 'images.dog.ceo',
         port: '',
         pathname: '/breeds/**',
-        search: ''
-      }
-    ]
-  }
-};
+        search: '',
+      },
+    ],
+  },
+}
 
-export default nextConfig;
+export default nextConfig

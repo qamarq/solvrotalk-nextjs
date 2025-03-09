@@ -13,9 +13,6 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20]
     defaults:
       run:
         working-directory: .
@@ -28,14 +25,14 @@ jobs:
         with:
           version: 10
 
-      - name: Setup node ${{ matrix.node-version }}
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20
           cache: 'pnpm'
 
       - name: Install deps
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Format check
         run: pnpm run format

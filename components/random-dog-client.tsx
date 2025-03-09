@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
-import React, { use } from 'react';
+import Image from 'next/image'
+import React, { use } from 'react'
 
 export function RandomDogClient({
-  dogPromise
+  dogPromise,
 }: {
-  dogPromise: Promise<[{ message: string }, unknown]>;
+  dogPromise: Promise<[{ message: string }, unknown]>
 }) {
-  const dog = use(dogPromise);
+  const dog = use(dogPromise)
 
   return (
     <div
@@ -24,5 +24,5 @@ export function RandomDogClient({
         className="size-[500px] aspect-square object-center object-cover"
       />
     </div>
-  );
+  )
 }
